@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "catalog/base.html" %}
 {% block content %}
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
@@ -25,5 +25,9 @@ please login with an account that has access.</p>
     </table>
     <input type="submit" value="login">
     <input type="hidden" name="next" value="{{ next }}">
+    <p><strong>Don't have an account?</strong>
+        <a href="{% url 'register' %}"> Sign Up Now</a>
+    </p>
+
 </form>
 {% endblock %}
